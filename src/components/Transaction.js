@@ -4,10 +4,10 @@ export const Transaction = ({ transaction }) => {
   const sign = transaction.amount < 0 ? '-' : '+';
   return (
     <li className={transaction.amount < 0 ? 'minus' : 'plus'}>
-      {transaction.text}{' '}
+      {transaction.text}
       <span>
         {sign}${Math.abs(transaction.amount)}
-      </span>{' '}
+      </span>
       <button className="delete-btn">x</button>
     </li>
   );
